@@ -47,8 +47,22 @@ public class Student {
         } while (!checkID);
         this.name = Validator.getString(scanner, "Name: ");
         this.address = Validator.getString(scanner, "Address: ");
-        this.phoneNumber = Validator.getString(scanner, "Phone Number: ");
-
+//        this.phoneNumber = Validator.getString(scanner, "Phone Number: ");
+        boolean checkPhone ;
+        do {
+            checkPhone= true;
+            this.phoneNumber = Validator.getString1(scanner, "Phone Number: ");
+            for (int i = 0; i < this.phoneNumber.length(); i++) {
+                try {
+                    Integer.parseInt(this.phoneNumber.charAt(i) + "");
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid number, try again");
+                    checkPhone = false;
+                    break;
+                }
+            }
+        }
+        while (!checkPhone);
     }
 
     public int getId() {

@@ -24,7 +24,7 @@ public class StudentManager {
     }
 
     public void sortStudentList() {
-        System.out.println("Sort Student List by Medium Score Gradual:");
+        System.out.println("Sort Student List ID:");
 //        List<Student> list1 = new ArrayList<>();
 //        list1.addAll(studentList);
         List<Student> list1 = new ArrayList<>(studentList);

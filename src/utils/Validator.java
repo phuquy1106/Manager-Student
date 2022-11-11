@@ -10,6 +10,20 @@ public class Validator {
         st = scanner.next();
         return st;
     }
+    public static String getString1(Scanner scanner, String prompt){
+        String st;
+        boolean isValid = false;
+        do {
+            System.out.print(prompt);
+            st = scanner.next();
+            if(st.length() ==7){
+                isValid = true;
+            }else{
+                System.out.println("Error. Enter 7 numbers. Try again.");
+            }
+        }while (!isValid);
+        return st;
+    }
 
     public static int getInt(Scanner scanner, String prompt) {
         int value = 0;
